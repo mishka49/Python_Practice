@@ -3,7 +3,7 @@ from random import randint
 from typing import List
 
 
-class List:
+class ListSorting:
     @staticmethod
     def generate_list(length: int) -> List[int]:
         return [randint(1, 100) for _ in range(int(length))]

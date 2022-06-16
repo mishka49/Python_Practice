@@ -1,4 +1,3 @@
-from mylist_sort import List
 from typing import List
 
 
