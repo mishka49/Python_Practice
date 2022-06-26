@@ -19,8 +19,6 @@ class Archive:
             substring = list_bytes[index].to_bytes(1, 'big')
             try:
                 while True:
-                    print(codes_list)
-
                     if codes_list.count(substring + list_bytes[index + 1].to_bytes(1, 'big')) == 0:
                         codes_list.append(substring + list_bytes[index + 1].to_bytes(1, 'big'))
                         encode_result += codes_list.index(substring).to_bytes(1, 'big')
@@ -80,4 +78,4 @@ class Archive:
 
 if __name__ == "__main__":
     Archive.pack_file("File.txt")
-    Archive.unpack_file("archFile.bin", "File1.txt")
+    Archive.unpack_file("File.bin", "File1.txt")
